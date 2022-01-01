@@ -6,7 +6,7 @@ if not game:IsLoaded() then
 end
 local console = loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/Console.lua"))()
 console.new()
-console.windowname('Görev Tamamlıyıcı')
+console.windowname('Gorev Tamamliyici')
 console.clear()
 console.log('Server'a Girildi!')
 console.newline()
@@ -88,7 +88,7 @@ end
 
 function sendPets(coinID)
 	console.newline()
-	console.log('[2] Sending Pets To Chest')
+	console.log("2 | Petlerin Chest'e Gonderiliyor")
 	equippedPets = {}
     for i, v in pairs(Lib.Save.Get().Pets) do
         if v.e then
@@ -101,12 +101,12 @@ function sendPets(coinID)
 		sendPet(coinID, v)
 	end
 	console.newline()
-	console.log('[3] Pets Sent To Chest')
+	console.log('3 | Petlerin Chest'e Gonderildi')
 
 	Lib.Network.Fired("Remove Coin"):Connect(function(cID)
 		if(cID == coinID) then
 			console.newline()
-			console.log("4 | Sandık Kırıldı, Yeni Sunucu'ya Giriliyor")
+			console.log("4 | Sandik Kirildi, Yeni Sunucu'ya Giriliyor")
 			getgenv().totalServers = getgenv().totalServers + 1
 			spawn(function()
 				Teleport()
@@ -114,7 +114,7 @@ function sendPets(coinID)
 			pcall(function()
 				syn.queue_on_teleport([[
 				getgenv().totalServers = ]]..totalServers..[[
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/GörevTamamlıyıcı"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/Gorev"))()
 				]])
 			end)
 			return true
@@ -122,7 +122,7 @@ function sendPets(coinID)
 	end)
 
 	wait(60)
-	console.log("4 | Petlerin Sandığı Yok Etmesi Uzun Sürdü, Her Neyse Yeni Sunucuya Giriliyor ")
+	console.log("4 | Petlerin Sandiği Yok Etmesi Uzun Surdu, Her Neyse Yeni Sunucuya Giriliyor ")
 	
 	getgenv().totalServers = getgenv().totalServers + 1
 	spawn(function()
@@ -131,7 +131,7 @@ function sendPets(coinID)
 	pcall(function()
 		syn.queue_on_teleport([[
 		getgenv().totalServers = ]]..totalServers..[[
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/GörevTamamlıyıcı"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/Gorev"))()
 		]])
 	end)
 end
@@ -142,12 +142,12 @@ function searchWorld(world)
     coins = (Lib.Network.Invoke("Get Coins"))
     for i,v in pairs(coins) do
         if(v.n == ('Christmas Gingerbread Chest')) then
-            console.log("[1] Gingerbread Sandığı "..world" Adlı Dünyada Bulundu")
+            console.log("[1] Gingerbread Sandiği "..world" Adli Dunyada Bulundu")
 			sendPets(i)
             return true
         end
     end
-    console.log("Sandık "..world " Adlı Dünyada Bulunamadı")
+    console.log("Sandik "..world " Adli Dunyada Bulunamadi")
 	return false
 end
 
@@ -161,7 +161,7 @@ console.newline()
 console.formatcolors("Toplam Girilen Sunucu: &a"..totalServers)
 console.newline()
 console.newline()
-console.log("Toplam  Kırılan Sandık: ")
+console.log("Toplam  Kirilan Sandik: ")
 console.progressbar(Proggres, Needed, 20)
 
 console.newline()
@@ -183,7 +183,7 @@ if searchWorld("Tech") then
 	return true
 end
 console.newline()
-console.log("Sandık Bulunamadı")
+console.log("Sandik Bulunamadi")
 
 getgenv().totalServers = getgenv().totalServers + 1
 spawn(function()
@@ -192,7 +192,7 @@ end)
 pcall(function()
 	syn.queue_on_teleport([[
 	getgenv().totalServers = ]]..totalServers..[[
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/GörevTamamlıyıcı"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/aniueqand/Roblox/main/Gorev"))()
 	]])
 end)
 console.newline()
