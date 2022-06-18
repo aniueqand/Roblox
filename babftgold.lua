@@ -11,7 +11,7 @@ local client = players.LocalPlayer
 --// Main
 ---------
 
-while _G.Busy do
+
     local bodyVelocity = Instance.new("BodyVelocity")
     bodyVelocity.Velocity = Vector3.new(0, -4, 0)
     bodyVelocity.Parent = client.Character.HumanoidRootPart
@@ -43,5 +43,5 @@ while _G.Busy do
     repeat wait() 
     until client.Character and client.Character:FindFirstChild("HumanoidRootPart")
     
-end
+
 ---------
