@@ -11,7 +11,6 @@ local client = players.LocalPlayer
 --// Main
 ---------
 
-
     local bodyVelocity = Instance.new("BodyVelocity")
     bodyVelocity.Velocity = Vector3.new(0, -4, 0)
     bodyVelocity.Parent = client.Character.HumanoidRootPart
