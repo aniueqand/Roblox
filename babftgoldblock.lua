@@ -16,7 +16,7 @@ while _G.Busy do
     bodyVelocity.Velocity = Vector3.new(0, -4, 0)
     bodyVelocity.Parent = client.Character.HumanoidRootPart
     
-    for i = 1, 4 do
+    for i = 1, 5 do
         if not client.Character or not client.Character:FindFirstChild("Humanoid") then
             repeat wait() until client.Character and client.Character:FindFirstChild("Humanoid")
         end
