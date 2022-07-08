@@ -1,4 +1,4 @@
-getgenv().Busy = true
+
 
 --// Services
 local players = game:GetService("Players")
