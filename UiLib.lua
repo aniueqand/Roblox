@@ -1234,7 +1234,7 @@ function Library:tab(options)
 		elseif #visible == 2 then
 			selectedTab.Visible = false
 			tab.Visible = false
-			self.Page.Visible = true
+			self.homePage.Visible = true
 			self.homeButton:tween{BackgroundTransparency = 0.15}
 			selectedTab = self.homeButton
 			Library.UrlLabel.Text = Library.Url .. "/home"	
