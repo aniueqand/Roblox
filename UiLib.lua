@@ -421,7 +421,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "Aniueqand",
+		Name = "Home",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://discord.com/aniueqand/babft"
@@ -908,9 +908,7 @@ function Library:create(options)
 
 	rawset(mt, "creditsContainer", creditsTab.container)
 
-	creditsTab:credit{Name = "StenDirt", Description = "Image Loader", Discord = "StenDirt"}
-	creditsTab:credit{Name = "StenDirt", Description = "Auto Loader", Discord = "StenDirt"}
-	creditsTab:credit{Name = "aniueqand", Description = "Others", Discord = "aniueqand#2751"}
+	creditsTab:credit{Name = "aniueqand", Description = "Ui Maker", Discord = "aniueqand#2751"}
 	
 
 	return mt
@@ -1236,7 +1234,7 @@ function Library:tab(options)
 		elseif #visible == 2 then
 			selectedTab.Visible = false
 			tab.Visible = false
-			self.homePage.Visible = true
+			self.Page.Visible = true
 			self.homeButton:tween{BackgroundTransparency = 0.15}
 			selectedTab = self.homeButton
 			Library.UrlLabel.Text = Library.Url .. "/home"	
