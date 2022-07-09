@@ -394,7 +394,8 @@ end
 
 function Library:create(options)
 
-	
+local settings = {Theme = "Serika"}	
+
 	if readfile and writefile and isfile then
 		if not isfile("AniueqandSettings.json") then
 			writefile("AniueqandSettings.json", HTTPService:JSONEncode(settings))
