@@ -1,14 +1,4 @@
---[[
 
-edited: 1/26
-developers:
-v3rm AbstractPoo	discord Abstract#8007
-v3rm 0xDEITY		discord Deity#0228
-
-
-
-
-]]
 
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -424,7 +414,7 @@ function Library:create(options)
 		Name = "Home",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
-		Link = "https://discord.com/aniueqand/babft"
+		Link = getgenv().Status
 	}, options)
 	
 	if getgenv and getgenv().AniueqandUI then
