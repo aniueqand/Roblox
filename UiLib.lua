@@ -97,8 +97,10 @@ end
 function Library:change_theme(toTheme)
 	Library.CurrentTheme = toTheme
 	local c = self:lighten(toTheme.Tertiary, 20)
+if _G.Profile == true then
 	Library.DisplayName.Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>"
-	for color, objects in next, Library.ThemeObjects do
+	end
+		for color, objects in next, Library.ThemeObjects do
 		local themeColor = Library.CurrentTheme[color]
 		for _, obj in next, objects do
 			local element, property, theme, colorAlter = obj[1], obj[2], obj[3], obj[4] or 0
@@ -767,7 +769,7 @@ local settings = {
 		})
 		Library.DisplayName = displayName
 	end
-
+if _G.Profile == true
 	local profileName = profile:object("TextLabel", {
 		Text = "@" .. LocalPlayer.Name,
 		TextScaled = true,
@@ -777,6 +779,7 @@ local settings = {
 		BackgroundTransparency = 1,
 		TextXAlignment = Enum.TextXAlignment.Left
 	})
+		end
 
 	local timeDisplay = profile:object("TextLabel", {
 		BackgroundTransparency = 1,
