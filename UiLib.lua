@@ -900,7 +900,7 @@ local settings = {
 
 	rawset(mt, "creditsContainer", creditsTab.container)
 
-	creditsTab:credit{Name = "aniueqand", Description = "Ui Maker"}
+	creditsTab:credit{Name = " ", Description = "None Lol."}
 	
 
 	return mt
