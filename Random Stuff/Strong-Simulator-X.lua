@@ -3,19 +3,19 @@ if game.PlaceId == 8876694280 then
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
 
-local w = library:CreateWindow("Strong Simulator X") -- Creates the window
+local w = library:CreateWindow("Strong Simulator X")
 
-local b = w:CreateFolder("Auto Rebirt") -- Creates the folder(U will put here your buttons,etc)
+local b = w:CreateFolder("Auto Rebirt")
 local o = w:CreateFolder("Others") 
 
 b:Toggle("Auto Rebirth",function(rebirth)
-getgenv().Rebirth = rebirth
+getgenv().rebirthAniueqand = rebirth
  doRebirth() 
 end)
 
 function doRebirth()
  spawn(function()
-    while getgenv().Rebirth == true do
+    while getgenv().rebirthAniueqand == true do
     game:GetService("ReplicatedStorage").Common._packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DataService.RF.Rebirth:InvokeServer()
     wait()
     end
@@ -23,16 +23,13 @@ function doRebirth()
 end
 
 o:Label("Made by aniueqand",{
-    TextSize = 15; -- Self Explaining
-    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
-    BgColor = Color3.fromRGB(26,26,26); -- Self Explaining
+    TextSize = 15;
+    TextColor = Color3.fromRGB(255,255,255); 
+    BgColor = Color3.fromRGB(26,26,26);
     
 }) 
 o:DestroyGui()
 o:Button("Copy Discord",function()
     setclipboard("https://discord.io/aniueqand")
 end)
-else
-
-Notification.new("warning", "Inf Money", "Join Correct Game")
 end
