@@ -1,7 +1,10 @@
-if game.PlaceId == 537413528 then
---Babft In SOON
-  elseif game.PlaceId == 6284583030 or 7722306047 or 10321372166 then
---Psx In SOON
-  else
-  --Universal In SOON
-  end
+
+local hubLoader = {
+2316994223 = "https://raw.githubusercontent.com/aniueqand/Roblox/main/Hub/PetSimulatorX.lua",
+210851291 = "https://raw.githubusercontent.com/aniueqand/Roblox/main/Hub/babft.lua"
+}
+for i,v in pairs(hubLoader) do
+  if game.GameId == i then
+    loadstring(game:HttpGet(i))()
+  end  
+end    
