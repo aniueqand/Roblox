@@ -1,7 +1,6 @@
 
-if getgenv().HubLoaded = readfile("aniueqand/HubLoader.UrMom") then
-    getgenv().aniueqand = {babft,psx}
-getgenv().aniueqand.babft = {}
+if getgenv().aniueqand.HubLoaded == "Loaded" then
+    getgenv().aniueqand.babft = {}
     if isfile("aniueqand/babftSetting.UrMomIsGay") then
     getgenv().aniueqand.babft = game:GetService("HttpService"):JSONDecode(readfile("aniueqand/babftSetting.UrMomIsGay"))
     end
