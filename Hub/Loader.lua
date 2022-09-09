@@ -3,5 +3,5 @@ local hubLoader = {
   [210851291] = "https://raw.githubusercontent.com/aniueqand/Roblox/main/Hub/babft.lua"
 }
 getgenv().aniueqand = {HubLoaded,babft,psx}
-getgenv()aniueqand.HubLoaded = true
+getgenv().aniueqand.HubLoaded = true
 loadstring(game:HttpGet(hubLoader[game.GameId]))()
